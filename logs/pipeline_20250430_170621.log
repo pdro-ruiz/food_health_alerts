@@ -1,0 +1,42 @@
+2025-04-30 17:06:21,975 - __main__ - INFO - Iniciando pipeline de alertas alimentarias
+2025-04-30 17:06:21,975 - __main__ - INFO - Ejecutando scrapers: all
+2025-04-30 17:06:21,976 - __main__ - INFO - Ejecutando scraper: C:\Users\pedro\Trabajos\food_health_alerts\scrapers\fda_scraper.py
+2025-04-30 17:09:05,970 - __main__ - INFO - Scraper ejecutado exitosamente: C:\Users\pedro\Trabajos\food_health_alerts\scrapers\fda_scraper.py
+2025-04-30 17:09:05,970 - __main__ - INFO - Ejecutando scraper: C:\Users\pedro\Trabajos\food_health_alerts\scrapers\rasff_scraper.py
+2025-04-30 17:09:14,190 - __main__ - ERROR - Error al ejecutar scraper C:\Users\pedro\Trabajos\food_health_alerts\scrapers\rasff_scraper.py: Command '['C:\\Users\\pedro\\miniconda3\\python.exe', 'C:\\Users\\pedro\\Trabajos\\food_health_alerts\\scrapers\\rasff_scraper.py']' returned non-zero exit status 1.
+2025-04-30 17:09:14,193 - __main__ - WARNING - El proceso de scraping no se completó correctamente
+2025-04-30 17:09:14,194 - __main__ - INFO - Procesando y filtrando datos
+2025-04-30 17:09:14,194 - processors.data_filter - INFO - Buscando archivos en: C:\Users\pedro\Trabajos\food_health_alerts\data\scraps
+2025-04-30 17:09:14,195 - processors.data_filter - INFO - Encontrado archivo FDA en: C:\Users\pedro\Trabajos\food_health_alerts\data\scraps\fda_alerts_20250430.csv
+2025-04-30 17:09:14,195 - processors.data_filter - INFO - Buscando archivos en: C:\Users\pedro\Trabajos\food_health_alerts\data
+2025-04-30 17:09:14,195 - processors.data_filter - INFO - Buscando archivos en: C:\Users\pedro\Trabajos\food_health_alerts\..\data
+2025-04-30 17:09:14,196 - processors.data_filter - INFO - Encontrado archivo RASFF en: C:\Users\pedro\Trabajos\food_health_alerts\..\data\RASFF_window.csv
+2025-04-30 17:09:14,222 - processors.data_filter - INFO - Leyendo datos de FDA desde C:\Users\pedro\Trabajos\food_health_alerts\data\scraps\fda_alerts_20250430.csv: 951 filas
+2025-04-30 17:09:14,247 - processors.data_filter - INFO - Datos de FDA filtrados: 297 filas
+2025-04-30 17:09:14,273 - processors.data_filter - INFO - Leyendo datos de RASFF desde C:\Users\pedro\Trabajos\food_health_alerts\..\data\RASFF_window.csv: 5574 filas
+2025-04-30 17:09:14,298 - processors.data_filter - INFO - Datos de RASFF filtrados: 5574 filas
+2025-04-30 17:09:14,648 - processors.data_filter - INFO - Datos procesados guardados en C:\Users\pedro\Trabajos\food_health_alerts\data\processed\bakery_dairy_alerts_20250430.csv: 5871 filas
+2025-04-30 17:09:14,649 - __main__ - INFO - Actualizando dataset consolidado
+2025-04-30 17:09:14,700 - processors.data_merger - INFO - Leyendo datos procesados desde C:\Users\pedro\Trabajos\food_health_alerts\data\processed\bakery_dairy_alerts_20250430.csv: 5871 filas
+2025-04-30 17:09:14,700 - processors.data_merger - INFO - El dataset consolidado no existe. Creando uno nuevo: C:\Users\pedro\Trabajos\food_health_alerts\data\final\consolidated_bakery_dairy_alerts.csv
+2025-04-30 17:09:14,735 - __main__ - INFO - Calculando estadísticas del dataset consolidado
+2025-04-30 17:09:14,798 - __main__ - INFO - Pipeline completado exitosamente
+2025-04-30 17:09:14,799 - __main__ - INFO - Total de registros en dataset consolidado: 5871
+2025-04-30 17:09:14,799 - __main__ - INFO - Generando informes (all)
+2025-04-30 17:09:14,800 - scripts.report_generator - INFO - Cargando y procesando datos para generación de informes...
+2025-04-30 17:09:14,919 - scripts.report_generator - INFO - Datos procesados: 5871 alertas analizadas
+2025-04-30 17:09:14,920 - scripts.report_generator - INFO - Generando informe Excel...
+2025-04-30 17:09:15,814 - scripts.report_generator - INFO - Informe Excel generado: C:\Users\pedro\Trabajos\food_health_alerts\reports\excel\informe_riesgos_alimentarios_2025-04-30.xlsx
+2025-04-30 17:09:15,814 - scripts.report_generator - INFO - Generando PDF del notebook...
+2025-04-30 17:09:18,633 - scripts.report_generator - ERROR - Error al generar PDF con WeasyPrint: cannot load library 'libgobject-2.0-0': error 0x7e.  Additionally, ctypes.util.find_library() did not manage to locate a library called 'libgobject-2.0-0'
+2025-04-30 17:09:18,633 - scripts.report_generator - INFO - HTML del notebook generado como alternativa: C:\Users\pedro\Trabajos\food_health_alerts\reports\pdf\notebook_temp.html
+2025-04-30 17:09:18,634 - scripts.report_generator - INFO - Generando presentación ejecutiva...
+2025-04-30 17:09:31,280 - scripts.report_generator - INFO - Presentación ejecutiva generada: C:\Users\pedro\Trabajos\food_health_alerts\reports\executive\resumen_ejecutivo_2025-04-30.pdf
+2025-04-30 17:09:31,281 - scripts.report_generator - INFO - 
+Resumen de informes generados:
+2025-04-30 17:09:31,281 - scripts.report_generator - INFO - 1. Informe Excel por categorías: C:\Users\pedro\Trabajos\food_health_alerts\reports\excel\informe_riesgos_alimentarios_2025-04-30.xlsx
+2025-04-30 17:09:31,282 - scripts.report_generator - INFO - 2. PDF del notebook completo: C:\Users\pedro\Trabajos\food_health_alerts\reports\pdf\notebook_temp.html
+2025-04-30 17:09:31,282 - scripts.report_generator - INFO - 3. Presentación ejecutiva: C:\Users\pedro\Trabajos\food_health_alerts\reports\executive\resumen_ejecutivo_2025-04-30.pdf
+2025-04-30 17:09:31,282 - __main__ - INFO - Informe excel generado en: C:\Users\pedro\Trabajos\food_health_alerts\reports\excel\informe_riesgos_alimentarios_2025-04-30.xlsx
+2025-04-30 17:09:31,282 - __main__ - INFO - Informe notebook_pdf generado en: C:\Users\pedro\Trabajos\food_health_alerts\reports\pdf\notebook_temp.html
+2025-04-30 17:09:31,282 - __main__ - INFO - Informe executive generado en: C:\Users\pedro\Trabajos\food_health_alerts\reports\executive\resumen_ejecutivo_2025-04-30.pdf
